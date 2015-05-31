@@ -1,0 +1,21 @@
+{% extends '../layout.html' %}
+
+{% block title %}My Page{% endblock %}
+
+{% block head %}
+  {% parent %}
+{% endblock %}
+
+{% block content %}
+<form action="create" method="post">
+  <div class="form-group">
+    <label for="txtFirstName">First Name:</label>
+    <input type="text" class="form-control" id="txtFirstName" name="FirstName">
+  </div>
+  <div class="form-group">
+    <label for="txtLastName">Last Name:</label>
+    <input type="text" class="form-control" id="txtLastName" name="LastName">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+{% endblock %}

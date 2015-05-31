@@ -1,0 +1,32 @@
+{% extends '../layout.html' %}
+
+{% block title %}My Page{% endblock %}
+
+{% block head %}
+  {% parent %}
+{% endblock %}
+
+{% block content %}
+<h4>People</h4>
+<table class="table table-condensed">
+  <tr>
+    <th>Person SID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+  {% for row in rows %} 
+  <tr>
+    <td>
+      {{row.Person_SID}}
+    </td>
+    <td>
+      {{row.First_Name}}
+    </td>
+    <td>
+      {{row.Last_Name}}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+
